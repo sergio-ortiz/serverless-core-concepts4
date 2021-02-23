@@ -1,6 +1,8 @@
+const faker = require("faker");
+
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
-    body: "Hello World",
+    body: `Hello ${faker.name.findName()}`,
   };
 };
